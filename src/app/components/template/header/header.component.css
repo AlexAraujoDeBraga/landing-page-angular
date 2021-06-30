@@ -1,0 +1,58 @@
+.header {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #c7a02c;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-top: 2px solid #808080;
+}
+
+.change-color {
+  opacity: 0.5;
+  position: fixed;
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.title-group {
+  text-decoration: none;
+  color: #fff;
+}
+
+#menu {
+  display: flex;
+  right: 0;
+  list-style-type: none;
+}
+
+#menu li {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-left: 20px;
+  cursor: pointer;
+  border-bottom: 2px solid #c7a02c;
+}
+
+#menu li:hover {
+  border-bottom: 2px solid #fff;
+  transition: 1s;
+}
+
+/*
+$(document).on('scroll', function(){
+    if ( $(window).scrollTop() > 30) {
+        $('#container-header').addClass('change-color');
+    } else {
+        $('#container-header').removeClass('change-color');
+    }
+});
+
+*/

@@ -1,0 +1,176 @@
+.apres-img {
+  position: relative;
+  background-image: url('/assets/img/eletric.jpg');
+  background-size: cover;
+  height: 50vh;
+}
+
+.apres-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.70);
+}
+
+#text-img {
+  position: relative;
+  color: #fff;
+  font-size: 3rem;
+  float: left;
+  top: 30%;
+  left: 30%;
+  transform: translate(-30%, -30%);
+}
+
+/*
+.botao {
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}*/
+
+/*quem-somos*/
+#quem-somos{
+  background-color: #e9e9e9;
+}
+
+.borda-branca{
+  padding: 0.2rem;
+  border-radius: 5px;
+  margin-bottom: 80px;
+  background: linear-gradient(to left, #87cefa, #c7a02c);
+}
+
+.title-qs {
+  text-align: start;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #000;
+  font-weight: 200;
+}
+
+.img-qs{
+  border: 1px solid rgb(211, 196, 196);
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 0 0 2em #363636;
+}
+
+/*instagaram-section*/
+#instagram-section{
+  background: linear-gradient(to left, #87cefa, #c7a02c);
+  padding-bottom: 80px;
+}
+
+.title-qs-inst {
+  text-align: start;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 200;
+}
+
+.texto-section{
+  font-size: 1.2rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #000;
+}
+
+.texto-inst{
+  margin-top: 50px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.link-inst{
+  font-size: 2rem;
+  color: #fff;
+}
+
+.botao-instagram {
+  margin-top: 20px;
+  margin-bottom: 80px;
+  color: #fff;
+  font-weight: bold;
+  background-color:#c7a02c;
+}
+
+.insta-logo{
+  color: #fff;
+  font-size: 8rem;
+}
+
+/*img services*/
+.config-container {
+  background-color: #e9e9e9;
+  padding-bottom: 80px;
+}
+
+.title-service {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-size: 3rem;
+  color: #000;
+  font-weight: 200;
+}
+
+.figure-services {
+  margin-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.img-services {
+  width: 80%;
+  border-radius: 5%;
+  box-shadow: 0 0 1em #363636;
+}
+
+.text-services {
+  margin-top: 25px;
+  font-size: 1.6rem;
+  color: #000;
+  font-weight: 200;
+}
+
+.borda {
+  width: 50%;
+  background: linear-gradient(to left, #87cefa, #c7a02c);
+  padding: 2px;
+  border-radius: 5px;
+  margin: 10px auto 0 auto;
+}
+
+.botao-servico {
+  margin-top: 20px;
+  background: #c7a02c;
+  color: #fff;
+  font-weight: bold;
+}
+
+/*pre footer*/
+#pre-footer{
+  background-color: #808080;
+  padding-bottom: 40px; 
+}
+
+.texto-pre-footer{
+  color:#fff;
+  font-size: 1.3rem;
+  
+}
+
+.titulo-pre-footer{
+  margin-top: 60px;
+  color:#fff;
+  font-size: 1.8rem;
+}

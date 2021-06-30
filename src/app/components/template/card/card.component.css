@@ -1,0 +1,18 @@
+.card-comentario{
+    max-width: 600px;
+    box-shadow: 0 0 0.5em #363636;
+}
+
+.header-image-comentario{
+    background-image: url('src/assets/img/c-1.PNG');
+    background-size: cover;
+}
+
+.header-image-comentario-2{
+    background-image: url('src/assets/img/c-3.PNG');
+    background-size: cover;
+}
+
+.star-color{
+    color: yellow;
+}

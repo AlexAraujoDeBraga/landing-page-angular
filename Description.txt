@@ -1,0 +1,1 @@
+Landing page feito em Angular
