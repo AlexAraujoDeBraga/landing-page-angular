@@ -8,10 +8,26 @@
         </a>
     </div>
     <ul id="menu">
-        <li>HOME</li>
-        <li>QUEM SOMOS</li>
-        <li>SERVIÇOS</li>
-        <li>PRODUTOS</li>
-        <li>CONTATO</li>
+        <li routerLink="">HOME</li>
+        <li (click)="scrollResumo()">QUEM SOMOS</li>
+        <li (click)="scrollProduct()">PRODUTOS/SERVIÇOS</li>
+        <li (click)="scroll(pre_footer)">CONTATO</li>
     </ul>
+<!--///////////////////////começo///////////////-->
+<div id="menu-icon">
+  <img src="assets/img/menu_.png" id="menu-image-icon" (click)="menuClick()" />
+</div>
+
 </mat-toolbar>
+<ul id="nav-menu-icon" [ngStyle]="{'display': display}">
+  <li class="item-menu-icon"(click)="scrollResumo()">HOME
+  </li>
+  <li class="item-menu-icon" (click)="scrollResumo()">QUEM SOMOS
+  </li>
+  <li class="item-menu-icon"(click)="scrollProduct()">PRODUTOS/SERVIÇOS
+  </li>
+  <li class="item-menu-icon"(click)="scroll(pre_footer)">CONTATO
+  </li>
+</ul>
+<router-outlet></router-outlet>
+<div #pre_footer #config_container></div>

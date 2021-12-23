@@ -1,6 +1,6 @@
 .botao-ui {
   position: relative;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 300;
   text-align: center;
   background-color: #c7a02c;
@@ -12,8 +12,31 @@
   transform: translateY(-50%);
 }
 
-.posicao-botao{
+.posicao-botao {
   margin-left: 5px;
   position: absolute;
   vertical-align: middle;
+}
+
+/* --------------------começa tela desktop-------------------- */
+@media (min-width: 768px) {
+  .botao-ui {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    background-color: #c7a02c;
+    padding-top: 15px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .posicao-botao {
+    margin-left: 5px;
+    position: absolute;
+    vertical-align: middle;
+  }
 }

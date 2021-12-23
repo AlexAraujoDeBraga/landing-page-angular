@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 declare var $: any;
 
 @Component({
@@ -7,8 +8,14 @@ declare var $: any;
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  display: string = '';
+  click: boolean = true;
 
-  constructor() { }
+  caracter: any;
+  anulaScrollProduct: boolean = false;
+  anulaScrollResumo: boolean = false;
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
     $(document).ready(function () {
@@ -20,6 +27,36 @@ export class HeaderComponent implements OnInit {
         }
       });
     });
+  }
+
+  menuClick() {
+    if (this.click) {
+      this.display = 'block';
+      this.click = false;
+    }
+    else {
+      this.display = 'none';
+      this.click = true;
+    }
+  }
+
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  scrollProduct() {
+    !this.anulaScrollProduct ? window.scrollBy({ top: 1380, left: 0, behavior: "smooth" })
+      : window.scrollBy({ top: -1380, left: 0, behavior: "smooth" });
+    this.anulaScrollProduct ? this.anulaScrollProduct = false
+      : this.anulaScrollProduct = true;
+  }
+
+  scrollResumo() {
+    !this.anulaScrollResumo ? window.scrollBy({ top: 380, left: 0, behavior: "smooth" })
+      : window.scrollBy({ top: -380, left: 0, behavior: "smooth" });
+    this.anulaScrollResumo ? this.anulaScrollResumo = false
+      : this.anulaScrollResumo = true;
   }
 
 }

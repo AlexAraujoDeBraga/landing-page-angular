@@ -1,6 +1,11 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-12 text-center apres-img">
+        <div class="col-lg-12 text-center"
+            [ngStyle]="{'background-image': 'url(assets/img/eletric_4.png)',
+                        'position': 'relative', 
+                        'background-size': 'cover',
+                        'background-repeat': 'no-repeat',
+                        'height': '50vh'}">
             <h2 id="text-img">Serviços em Auto Elétrica Automotiva em Maceió/AL</h2>
             <!--<button type="button" class="btn btn-warning botao">
                 Solicite um Orçamento!
@@ -27,7 +32,9 @@
                 <p class="texto-section">
                     Além de serviços temos peças e acessorios para seu veículo.
                 </p>
-                <button type="button" class="btn botao-instagram">ENTRE EM CONTATO</button>
+                <button type="button" class="btn botao-instagram" (click)="linkWhatssap()">
+                    ENTRE EM CONTATO
+                </button>
             </div>
         </div>
     </div>
@@ -52,44 +59,35 @@
     </div>
 </section>
 
-<!--fotos dos serviços-->
-<section class="config-container">
+<!--fotos dos produtos-->
+<section id="config_container">
     <div class="container text-center">
         <div class="row">
             <div class="col-lg-12">
                 <h3 class="title-qs">Serviços/Produtos</h3>
             </div>
             <div class="col-lg-12 col-sm-12 borda-branca"></div>
-            <div class="col-lg-4">
+            <!-- <div class="d-flex justify-content-center">
+                <mat-spinner *ngIf="displaySpinner" 
+                [ngStyle]="{'z-index': '1', 
+                'position': 'absolute'}"></mat-spinner>
+            </div> -->
+            <!-- ngfor -->
+            <div class="col-lg-4" *ngFor="let item of produtos">
                 <figure class="figure-services">
-                    <img src="assets/img/lampada.PNG" class="img-services">
+                    <img src="{{item.imageURL}}" class="img-services">
                     <figcaption class="text-services">
-                        Troca de Lâmpadas em Geral
+                        {{item.nomeProduto}}
                         <div class="borda"></div>
                     </figcaption>
-                    <button type="button" class="btn botao-servico">SAIBA-MAIS +</button>
+                    <button type="button" (click)="selectProduto(item.codProduto)" class="btn botao-servico" 
+                            >VER-MAIS +
+                    </button>
+                    <router-outlet></router-outlet>
                 </figure>
             </div>
-            <div class="col-lg-4">
-                <figure class="figure-services">
-                    <img src="assets/img/motors.png" class="img-services">
-                    <figcaption class="text-services">
-                        Motor de Partida
-                        <div class="borda"></div>
-                    </figcaption>
-                    <button type="button" class="btn botao-servico">SAIBA-MAIS +</button>
-                </figure>
-            </div>
-            <div class="col-lg-4">
-                <figure class="figure-services">
-                    <img src="assets/img/seta.png" class="img-services">
-                    <figcaption class="text-services">
-                        Chave de Seta e muito mais
-                        <div class="borda"></div>
-                    </figcaption>
-                    <button type="button" class="btn botao-servico">SAIBA-MAIS +</button>
-                </figure>
-            </div>
+            
+
             <div class="col-lg-12">
                 <h3 class="title-qs">Depoimentos</h3>
             </div>
@@ -99,22 +97,13 @@
                 <h3 class="title-qs">Nossa Oficina</h3>
             </div>
             <div class="col-lg-12 col-sm-12 borda-branca"></div>
-            <div class="col-lg-3 col-sm-12">
-                <img src="assets/img/f-1.jpg" alt="" class="img-qs">
-            </div>
-            <div class="col-lg-3 col-sm-12">
-                <img src="assets/img/f-2.jpg" alt="" class="img-qs">
-            </div>
-            <div class="col-lg-3 col-sm-12">
-                <img src="assets/img/f-3.jpg" alt="" class="img-qs">
-            </div>
-            <div class="col-lg-3 col-sm-12">
-                <img src="assets/img/f-4.jpg" alt="" class="img-qs">
+            <div class="col-lg-3 col-sm-12" *ngFor="let foto of fotos">
+                <img src="{{foto.img}}" alt="" class="img-qs">
             </div>
         </div>
     </div>
 </section>
-<section id="pre-footer">
+<section id="pre_footer">
     <div class="container">
         <div class="row">
             <div class="col-lg-1 col-sm-0"></div>
@@ -148,7 +137,12 @@
                     <i class="bi bi-geo-alt-fill"> Av. Dr. Fernando Couto Malta - Cidade Universitária -
                         Maceió/Alagoas</i>
                 </p>
-                <google-map height="250px" width="450px" [center]="position">
+                <google-map *ngIf="largeMapShow" height="250px" width="450px" [center]="position">
+                    <map-marker [position]="position" [label]="label" [title]="title">
+                    </map-marker>
+                </google-map>
+
+                <google-map *ngIf="miniMapShow" height="160px" width="330px" [center]="position">
                     <map-marker [position]="position" [label]="label" [title]="title">
                     </map-marker>
                 </google-map>
@@ -157,3 +151,4 @@
         </div>
     </div>
 </section>
+

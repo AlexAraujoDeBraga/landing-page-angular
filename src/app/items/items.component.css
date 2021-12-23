@@ -1,0 +1,97 @@
+/*img services*/
+.config-container {
+  background-color: #fff;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.title-qs {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #000;
+  font-weight: 200;
+}
+
+.figure-services {
+  margin-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.img-services {
+  width: 80%;
+}
+
+.text-services {
+  font-size: 1rem;
+  color: #000;
+  font-weight: 200;
+  text-align: justify;
+}
+
+.borda {
+  width: 50%;
+  background: linear-gradient(to left, #87cefa, #c7a02c);
+  padding: 2px;
+  border-radius: 5px;
+  margin: 10px auto 0 auto;
+}
+
+.botao-servico {
+  margin-top: 20px;
+  background: #c7a02c;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* --------------------começa tela desktop-------------------- */
+@media (min-width: 768px) {
+
+  /*img services*/
+  .config-container {
+    background-color: #fff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .title-qs {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    color: #000;
+    font-weight: 200;
+  }
+
+  .figure-services {
+    margin-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .img-services {
+    width: 80%;
+  }
+
+  .text-services {
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 200;
+    text-align: justify;
+  }
+
+  .borda {
+    width: 50%;
+    background: linear-gradient(to left, #87cefa, #c7a02c);
+    padding: 2px;
+    border-radius: 5px;
+    margin: 10px auto 0 auto;
+  }
+
+  .botao-servico {
+    margin-top: 20px;
+    background: #c7a02c;
+    color: #fff;
+    font-weight: bold;
+  }
+}
